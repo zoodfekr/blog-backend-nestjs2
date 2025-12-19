@@ -14,13 +14,13 @@ export class UsersService {
       userId: 1,
       username: 'john',
       password: 'changeme',
-      role: Role.Admin
+      roles: Role.Admin
     },
     {
       userId: 2,
       username: 'maria',
       password: 'guess',
-      role: Role.User
+      roles: Role.User
     },
   ];
 

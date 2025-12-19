@@ -6,7 +6,6 @@ import { AuthModule } from './auth/auth.module';
 import { APP_GUARD, APP_INTERCEPTOR } from '@nestjs/core';
 import { AuthGuard } from './auth/partials/auth.guard';
 import { RolesGuard } from './users/partials/roles.guard';
-import { ErrorInterceptor } from './common/interceptors/errors.interceptor';
 
 @Module({
   imports: [UsersModule, AuthModule],
@@ -21,10 +20,7 @@ import { ErrorInterceptor } from './common/interceptors/errors.interceptor';
       provide: APP_GUARD,
       useClass: RolesGuard,
     },
-    {
-      provide: APP_INTERCEPTOR,
-      useClass: ErrorInterceptor,
-    },
+
   ],
 })
 export class AppModule { }
