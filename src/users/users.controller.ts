@@ -9,7 +9,7 @@ export class UsersController {
   constructor(private readonly usersService: UsersService) { }
 
 
-  @get('')
+  @Get('')
   getAllUsers() {
     return this.usersService.allUSers()
   }
@@ -17,3 +17,4 @@ export class UsersController {
 
 
 }
+
