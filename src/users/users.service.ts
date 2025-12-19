@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { Role } from 'src/common/role.enum';
+import { Role } from 'src/common/enums/role.enum';
 
 
 export type User = any;

@@ -2,7 +2,7 @@ import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/commo
 import { UsersService } from './users.service';
 import { get } from 'http';
 import { Roles } from './partials/roles.decorator';
-import { Role } from 'src/common/role.enum';
+import { Role } from 'src/common/enums/role.enum';
 
 
 @Controller('users')
