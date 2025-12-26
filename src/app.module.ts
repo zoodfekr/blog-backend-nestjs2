@@ -9,6 +9,8 @@ import { RolesGuard } from './users/partials/roles.guard';
 import { DataBaseModule } from './data-base/data-base.module';
 import { CatsModule } from './cats/cats.module';
 import { ArticlesModule } from './articles/articles.module';
+import { LoggerModule } from './logger/logger.module';
+import { MathModule } from './math/math.module';
 
 @Module({
   imports: [
@@ -16,7 +18,9 @@ import { ArticlesModule } from './articles/articles.module';
     AuthModule,
     DataBaseModule,
     CatsModule,
-    ArticlesModule
+    ArticlesModule,
+    LoggerModule,
+    MathModule
   ],
   controllers: [AppController],
   providers: [
