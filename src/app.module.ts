@@ -11,6 +11,7 @@ import { CatsModule } from './cats/cats.module';
 import { ArticlesModule } from './articles/articles.module';
 import { LoggerModule } from './logger/logger.module';
 import { MathModule } from './math/math.module';
+import { ConfigModule } from '@nestjs/config';
 
 @Module({
   imports: [
@@ -20,7 +21,11 @@ import { MathModule } from './math/math.module';
     CatsModule,
     ArticlesModule,
     LoggerModule,
-    MathModule
+    MathModule,
+    ConfigModule.forRoot({
+      isGlobal: true,
+      envFilePath: '.env'
+    })
   ],
   controllers: [AppController],
   providers: [
